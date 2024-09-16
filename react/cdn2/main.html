@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <title>Ejemplo CDN</title>
+</head>
+<body>
+    <div id="root"></div>
+    
+    <script>
+        const rootDiv = document.getElementById("root")
+        const root = ReactDOM.createRoot(rootDiv)
+
+        // No se puede renderizar HTML directamente, esto previene la inyección de código malicioso
+        root.render("<button> hola mundo </button>")
+
+        // Para renderizar HTML se debe usar
+        /* const button1 = React.createElement("button", null, "hola mundo")
+        root.render(button1) */
+
+        // Sin embargo, no se pueden renderizar varios elementos directamente
+        /* const button2 = React.createElement("button", null, "Button 2")
+        const button3 = React.createElement("button", null, "Button 3")
+        root.render(button1, button2, button3) */
+
+        // Para renderizar varios elementos se debe usar un contenedor
+        /* let container = React.createElement("div", null, [button1, button2, button3])
+        root.render(container) */
+
+        // En vez de un div, también se puede usar un fragment, o contenedor vació
+        /* container = React.createElement(React.Fragment, null, button1, button2, button3)
+        root.render(container) */
+
+        // Alternativamente, se puede renderizar directamente los elementos a modo de array
+        /* root.render([button1, button2, button3]) */
+
+
+    </script>
+</body>
+</html>
