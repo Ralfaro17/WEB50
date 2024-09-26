@@ -1,0 +1,22 @@
+h3{
+    color:red
+}
+
+
+
+input{
+    background-color: black;
+}
+
+#waos{
+    background-color: blue;
+}
+
+div::after{
+    content: "Hola";
+    color: red;
+}
+
+div:hover{
+    background-color: yellow;
+}
