@@ -35,6 +35,7 @@ function App() {
       <h2>{nombre}</h2>
       <input type="text" onChange={(e) => setNombre(e.target.value)} /> */}
       <Componente name={"Enyel"} />
+      <p> {nombre} </p>
       <a href="/react"></a>
     </>
   );
